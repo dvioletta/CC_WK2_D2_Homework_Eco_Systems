@@ -15,4 +15,8 @@ class River
     @shoal << fish
   end
 
+  def remove_fish(fish)
+    @shoal.delete(fish)
+  end
+
 end
