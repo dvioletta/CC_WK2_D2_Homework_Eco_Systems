@@ -34,13 +34,13 @@ class BearTest < MiniTest::Test
   end
 
 
-  def test_add_fish_to_bear__remove_from_river()
+  def test_add_fish_to_bear__remove_from_river
   @bear_1.add_fish(@fish_3)
   @river_1 = River.new("Amazon")
   @river_1.add_fish(@fish_2)
-  @river_1.add_fish(@fish_2)
+  @river_1.add_fish(@fish_1)
   @bear_1.remove_fish(@river_1)
-  assert_equal(3, @bear_1.shock_pile.count())
+  assert_equal(1, @bear_1.stock_pile.count())
   end
 
 end
